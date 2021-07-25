@@ -25,6 +25,7 @@ import ScrollToTop from './components/ScrollToTop'
 import ResetPasswordMailScreen from './screens/ResetPasswordEmailScreen'
 import ResetPasswordScreen from './screens/ResetPasswordScreen'
 import WishlistScreen from './screens/WishlistScreen'
+import LandingScreen from './screens/LandingScreen'
 
 const App = () => {
 	return (
@@ -46,6 +47,7 @@ const App = () => {
 					<Route path='/cart/:id?' component={CartScreen} />
 					<Route path='/admin/userlist' component={UserListScreen} />
 					<Route path='/admin/user/:id/edit' component={UserEditScreen} />
+					<Route path='/' component={LandingScreen} />
 					<Route
 						path='/api/user/confirmation/:token'
 						component={UserConfirmScreen}
@@ -83,7 +85,7 @@ const App = () => {
 						exact
 					/>
 
-					<Route path='/' component={HomeScreen} exact />
+					<Route path='/home' component={HomeScreen} exact />
 				</>
 			</main>
 			<Footer />

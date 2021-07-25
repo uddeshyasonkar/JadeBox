@@ -1,4 +1,174 @@
+/* USER DEFINED STYLES-UD */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+	font-family: 'zeichenregular';
+	src: url('zeichen.woff2') format('woff2'), url('zeichen.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'monument_extendedregular';
+	src: url('monumentextended-regular.woff2') format('woff2'),
+		url('monumentextended-regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+:root {
+	--bs-primary: #3c5333;
+	--bs-primarylight: #72a95c80;
+	--bs-background: #e7eee6;
+	--bs-dark: #1b1b1b;
+	--bs-white: #ffffff;
+	--bs-text: #30362e;
+	--bs-font-sans-serif: 'Poppins', sans-serif;
+	--bs-font-extended: 'monument_extendedregular', sans-serif;
+	--bs-font-handwritten: 'zeichenregular', sans-serif;
+}
+.navbar {
+	position: relative;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding-top: 2rem;
+	background-color: var(--bs-background);
+	padding-bottom: 0.5rem;
+}
+.nav-link {
+	font-family: var(--bs-font-extended);
+	display: block;
+	padding: 0.5rem 1.3rem;
+	font-size: 0.8rem;
+
+	color: var(--bs-text);
+	text-decoration: none;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+		border-color 0.15s ease-in-out;
+}
+
+.form-control::placeholder {
+	font-family: var(--bs-font-sans-serif);
+	color: #868e96;
+	opacity: 1;
+}
+
+.nav-link:hover {
+	color: var(--bs-primary);
+	text-decoration: underline 3px var(--bs-primary);
+}
+
+@media (max-width: 576px) {
+	.main-page-pic {
+		display: flex;
+		margin-bottom: 1rem;
+	}
+	.main-page-pic-2 {
+		display: none;
+	}
+	c1 {
+		font-family: var(--bs-font-handwritten);
+		line-height: 5rem;
+		padding-bottom: 3rem;
+		font-size: 85px;
+		color: var(--bs-primary);
+	}
+	e1 {
+		font-family: var(--bs-font-extended);
+		font-size: 20px;
+	}
+}
+@media (min-width: 577px) {
+	.main-page-pic {
+		display: none;
+	}
+	.main-page-pic-2 {
+		display: flex;
+	}
+	c1 {
+		font-family: var(--bs-font-handwritten);
+		line-height: 5rem;
+		padding-bottom: 3rem;
+		font-size: 135px;
+		color: var(--bs-primary);
+	}
+	e1 {
+		font-family: var(--bs-font-extended);
+		font-size: 30px;
+	}
+}
+@media (min-width: 992px) {
+	.main-page-line {
+		padding-top: 25vh;
+	}
+	c1 {
+		font-family: var(--bs-font-handwritten);
+		line-height: 5rem;
+		padding-bottom: 3rem;
+		font-size: 135px;
+		color: var(--bs-primary);
+	}
+	e1 {
+		font-family: var(--bs-font-extended);
+		font-size: 30px;
+	}
+}
+@media (min-width: 1000px) {
+	.main-page-line {
+		padding-top: 15vh;
+	}
+	.nav-link {
+		font-family: var(--bs-font-extended);
+		display: block;
+		padding: 0.5rem 0.5rem;
+		font-size: 0.8rem;
+
+		color: var(--bs-text);
+		text-decoration: none;
+		transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+			border-color 0.15s ease-in-out;
+	}
+}
+@media (min-width: 1400px) {
+}
+
+s2 {
+	font-family: var(--bs-font-sans-serif);
+	font-size: 1rem;
+}
+
+.main-page-pic-2 {
+	margin: 1.5rem 0;
+}
+.btn-custom-cont {
+	font-family: var(--bs-font-sans-serif);
+	font-weight: bold;
+	color: var(--bs-white);
+	background-color: var(--bs-primary);
+	font-size: 0.9rem;
+	border-radius: 20px;
+	padding: 4px 16px;
+	margin-right: 2rem;
+	margin-top: 1.5rem;
+	width: max-content;
+}
+.btn-custom-out {
+	font-family: var(--bs-font-sans-serif);
+	font-weight: bold;
+	color: var(--bs-primary);
+	margin-top: 1rem;
+	font-size: 0.9rem;
+	border-radius: 20px;
+	padding: 4px 16px;
+	width: max-content;
+}
+
+/* ENDS HERE */
 main {
+	background-color: var(--bs-background);
 	min-height: 80vh;
 }
 
@@ -74,9 +244,7 @@ h2 {
 	background-size: 100% 100%;
 	height: 100%;
 } */
-.navbar {
-	margin-bottom: 0px;
-}
+
 .jumbotron {
 	padding-left: 30%;
 	padding-right: 30%;
@@ -136,10 +304,7 @@ img.hover-zoom {
 img.hover-zoom:hover {
 	transform: scale(1.25);
 }
-.navbar {
-	padding-bottom: 0%;
-	padding-top: 0%;
-}
+
 /*******************FOOTER CSS***************************************/
 /*
 .footer-bs {
